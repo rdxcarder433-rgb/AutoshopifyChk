@@ -1014,6 +1014,10 @@ async def process_card_async(cc, mes, ano, cvv, site_url, variant_id=None, proxy
     return await process_card(cc, mes, ano, cvv, site_url, variant_id, proxy_str)
 
 app = Flask(__name__)
+@app.route('/health')
+@app.route('/healthz')
+def health():
+    return "", 200
 # ================== إعدادات /shopify_v2 ==================
 API_KEYS = {
     "AFUONA_a7K9mQ2xLp4Rt8Vw": "client_01",
