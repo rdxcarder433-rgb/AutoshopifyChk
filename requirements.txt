@@ -1,3 +1,5 @@
-aiohttp
-flask
+Flask
+requests
+urllib3
 gunicorn==21.2.0
+tls_client
